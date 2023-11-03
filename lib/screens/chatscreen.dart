@@ -27,14 +27,14 @@ class ChatScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               size: 28,
             ),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.more_vert_rounded,
               size: 28,
             ),
@@ -50,12 +50,10 @@ class ChatScreen extends StatelessWidget {
               size: 28,
             ),
           ),
-
           actions: [
-
             Container(
-              width: 115,
-              decoration: BoxDecoration(
+              width: 80,
+              decoration: const BoxDecoration(
                 border: Border(
                   bottom: BorderSide(color: Colors.white, width: 5),
                 ),
@@ -65,10 +63,10 @@ class ChatScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     child: GestureDetector(
                       onTap: () {},
-                      child: Text(
+                      child: const Text(
                         'CHATS',
                         style: TextStyle(
                           color: Colors.white,
@@ -82,7 +80,7 @@ class ChatScreen extends StatelessWidget {
             ),
             Container(
               width: 115,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 border: Border(
                   bottom: BorderSide(color: Colors.transparent, width: 5),
                 ),
@@ -92,7 +90,7 @@ class ChatScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.pushNamed(context, StatusScreen.id);
@@ -111,7 +109,7 @@ class ChatScreen extends StatelessWidget {
             ),
             Container(
               width: 115,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 border: Border(
                   bottom: BorderSide(color: Colors.transparent, width: 5),
                 ),
@@ -121,7 +119,7 @@ class ChatScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     child: GestureDetector(
                       onTap: () {
                         Navigator.pushNamed(context, CallScreen.id);
@@ -141,23 +139,21 @@ class ChatScreen extends StatelessWidget {
           ],
         ),
       ),
-
-      floatingActionButton: Container(
+      floatingActionButton: SizedBox(
         width: 70,
         height: 70,
         child: FittedBox(
           child: FloatingActionButton(
             onPressed: () {},
-            child: Icon(
+            backgroundColor: const Color(0xff25D366),
+            child: const Icon(
               Icons.message,
             ),
-            backgroundColor: Color(0xff25D366),
           ),
         ),
       ),
-
       body: ListView.separated(
-        padding: EdgeInsets.only(top: 7),
+          padding: const EdgeInsets.only(top: 7),
           itemBuilder: (context, index) => ChatTile(
                 name: data.chat.values.elementAt(index).elementAt(0) as String,
                 image: data.chat.values.elementAt(index).elementAt(1),
@@ -166,7 +162,7 @@ class ChatScreen extends StatelessWidget {
                 time: data.chat.values.elementAt(index).elementAt(3) as String,
                 // time: data.chat.values.elementAt(index).elementAt(3)?? '',     (this way also you can do it sinan)
               ),
-          separatorBuilder: (context, index) => Seperator(),
+          separatorBuilder: (context, index) => const Seperator(),
           itemCount: data.chat.length),
     );
   }

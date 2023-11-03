@@ -10,17 +10,12 @@ class Data {
       '10:30 pm'
     ],
     1: [
-      'Rinza ',
+      'Andrew Tate ',
       null,
-      'I Love You...!',
+      'Escape the Matrix!!!',
       '5:00 am',
     ],
-    2: [
-      'Shinas k',
-      'images/user (1).png',
-      'Da Thalassery ponna ? verninda vegm vaa ennal....',
-      '6:55 pm'
-    ],
+    2: ['Shinas k', 'images/user (1).png', 'How are you man? ....', '6:55 pm'],
     3: [
       'Muhammed Rihan CP',
       'images/man (1).png',
@@ -30,13 +25,13 @@ class Data {
     4: [
       'Shiza ',
       'images/woman.png',
-      'How are you?',
+      'Where are you?',
       '5:23 am',
     ],
     5: [
       'Muhammed Nihal CP',
       'images/programmer.png',
-      'How are you?',
+      'Error on my codes..',
       '11:23 am',
     ],
     6: [
@@ -60,13 +55,13 @@ class Data {
     9: [
       'Afnan ',
       'images/user.png',
-      'Da Thalassery ponna ?',
+      'Share this please ?',
       '6:12 pm',
     ],
     10: [
       'Hanna',
       'images/woman.png',
-      'what are you saying did you complete it? ?',
+      'did you complete it? ?',
       '6:23 pm',
     ],
   };
@@ -239,7 +234,7 @@ class Data {
       false,
     ],
     9: [
-      'Shahl hrz',
+      'Andrew Tate',
       'images/user (1).png',
       1,
       true,
@@ -255,40 +250,35 @@ class Data {
       'Hey How are you?',
       true,
     ],
-    1:[
+    1: [
       'Hey iam fine been a while',
       false,
-
     ],
-    2:[
-      'What about rinsa',
+    2: [
+      'What about your sister?',
       true,
-
     ],
-    3:[
+    3: [
       "She's fine.., brother",
       false,
-
     ],
-    4:[
-      'hmm.. where are you now? Bengaluru?'
-      ,true,
+    4: [
+      'hmm.. where are you now? Bengaluru?',
+      true,
     ],
-    5:[
+    5: [
       'What about Coding?',
       true,
-
-  ],
-    6:[
+    ],
+    6: [
       'ya iam in bengaluru right now.',
       false,
-
     ],
-    7:[
+    7: [
       'Ya Still Coding Happily',
       false,
     ],
-    8:[
+    8: [
       'ok bro catch you later',
       true,
     ],

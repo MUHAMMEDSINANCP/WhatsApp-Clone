@@ -18,7 +18,7 @@ class StatusTile extends StatelessWidget {
               leading: DottedBorder(
                 color: Colors.teal.shade300,
                 borderType: BorderType.Circle,
-                radius: Radius.circular(27),
+                radius: const Radius.circular(27),
                 dashPattern: [
                   (2 * pi * 27) /
                       (data.statusList.values.elementAt(index).elementAt(2)
@@ -41,27 +41,28 @@ class StatusTile extends StatelessWidget {
               ),
               title: Text(
                 '${data.statusList.values.elementAt(index).elementAt(0)}',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 20,
                 ),
               ),
-              subtitle:  Text(
+              subtitle: Text(
                 '${data.statusList.values.elementAt(index).elementAt(4)}',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.grey,
                   fontWeight: FontWeight.w600,
                   fontSize: 16,
                 ),
-              ) ,
+              ),
             );
           },
           separatorBuilder: (context, index) {
-
-            return data.statusList.values.elementAt(index).elementAt(5) as bool? SizedBox(
-              height: 20,
-            ): Seperator();
+            return data.statusList.values.elementAt(index).elementAt(5) as bool
+                ? const SizedBox(
+                    height: 20,
+                  )
+                : const Seperator();
           },
           itemCount: data.statusList.length),
     );

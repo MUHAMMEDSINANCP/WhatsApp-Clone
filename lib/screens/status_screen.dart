@@ -48,7 +48,7 @@ class StatusScreen extends StatelessWidget {
           ),
           actions: [
             Container(
-              width: 115,
+              width: 80,
               decoration: const BoxDecoration(
                 border: Border(
                   bottom: BorderSide(color: Colors.transparent, width: 5),
@@ -139,7 +139,7 @@ class StatusScreen extends StatelessWidget {
         children: [
           Column(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(top: 8.0),
                 child: ListTile(
                   leading: Stack(
@@ -181,7 +181,7 @@ class StatusScreen extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width,
                 color: Colors.grey.shade200,
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 20,
                   top: 10,
                   bottom: 10,
@@ -193,37 +193,35 @@ class StatusScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-               StatusTile(
-
-               ),
+              const StatusTile(),
             ],
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Padding(
-                padding: EdgeInsets.only(right: 20, bottom: 20),
+                padding: const EdgeInsets.only(right: 20, bottom: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.blueGrey.shade50,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.grey,
                               offset: Offset(0, 3),
                               blurRadius: 3,
                             ),
                           ]),
-                      child: ImageIcon(
+                      child: const ImageIcon(
                         AssetImage(
                           'images/pencil.png',
                         ),
@@ -232,19 +230,19 @@ class StatusScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
-                padding: EdgeInsets.only(right: 20, bottom: 15),
+                padding: const EdgeInsets.only(right: 20, bottom: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Container(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         height: 58,
                         width: 58,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Color(0xff25d366),
                             boxShadow: [
@@ -254,7 +252,7 @@ class StatusScreen extends StatelessWidget {
                                 blurRadius: 3,
                               ),
                             ]),
-                        child: Icon(
+                        child: const Icon(
                           Icons.camera_alt_rounded,
                           color: Colors.white,
                           size: 26,

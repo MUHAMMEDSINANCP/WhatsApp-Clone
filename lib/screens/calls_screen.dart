@@ -42,7 +42,7 @@ class CallScreen extends StatelessWidget {
         bottom: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: const Color(0xff075e54),
-          leading: Container(
+          leading: SizedBox(
             child: Icon(
               Icons.camera_alt_rounded,
               color: Colors.white.withOpacity(0.5),
@@ -51,7 +51,7 @@ class CallScreen extends StatelessWidget {
           ),
           actions: [
             Container(
-              width: 115,
+              width: 80,
               decoration: const BoxDecoration(
                 border: Border(
                   bottom: BorderSide(color: Colors.transparent, width: 5),
@@ -123,7 +123,7 @@ class CallScreen extends StatelessWidget {
                     padding: const EdgeInsets.all(8),
                     child: GestureDetector(
                       onTap: () {},
-                      child: Text(
+                      child: const Text(
                         'CALLS',
                         style: TextStyle(
                           color: Colors.white,
@@ -138,14 +138,14 @@ class CallScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: Container(
+      floatingActionButton: SizedBox(
         width: 70,
         height: 70,
         child: FittedBox(
           child: FloatingActionButton(
             onPressed: () {},
-            backgroundColor: Color(0xff25d366),
-            child: Icon(
+            backgroundColor: const Color(0xff25d366),
+            child: const Icon(
               Icons.add_call,
               color: Colors.white,
               size: 20,
@@ -157,18 +157,17 @@ class CallScreen extends StatelessWidget {
         itemBuilder: (context, index) => CallTile(
           name: callList.calls.values.elementAt(index).elementAt(0) as String,
           image: callList.calls.values.elementAt(index).elementAt(1) as String,
-          videocall:
-              callList.calls.values.elementAt(index).elementAt(2) as int,
+          videocall: callList.calls.values.elementAt(index).elementAt(2) as int,
           isMissed: callList.calls.values.elementAt(index).elementAt(3) as bool,
           inComing: callList.calls.values.elementAt(index).elementAt(4) as bool,
           time: callList.calls.values.elementAt(index).elementAt(5) as String,
         ),
         separatorBuilder: (context, index) =>
             callList.calls.values.elementAt(index).elementAt(6) as bool
-                ? SizedBox(
+                ? const SizedBox(
                     height: 10,
                   )
-                : Seperator(),
+                : const Seperator(),
         itemCount: callList.calls.length,
       ),
     );

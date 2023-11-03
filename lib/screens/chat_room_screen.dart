@@ -23,7 +23,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Color(0xff075e54),
+        backgroundColor: const Color(0xff075e54),
         title: Row(
           children: [
             widget.image != null
@@ -34,7 +34,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
                 : Container(
                     width: 36,
                     height: 36,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white,
                     ),
@@ -44,33 +44,35 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
                       color: Colors.grey.shade500,
                     ),
                   ),
-            SizedBox(
+            const SizedBox(
               width: 8,
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.name,
-                  style: TextStyle(
-                    fontSize: 17,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.name,
+                    style: const TextStyle(
+                      fontSize: 17,
+                    ),
                   ),
-                ),
-                Text(
-                  'online',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
+                  const Text(
+                    'online',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.videocam_rounded,
               color: Colors.white,
               size: 28,
@@ -78,7 +80,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.phone,
               color: Colors.white,
               size: 28,
@@ -86,7 +88,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               CupertinoIcons.ellipsis_vertical,
               color: Colors.white,
               size: 25,
@@ -97,8 +99,8 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.symmetric(vertical: 5),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.symmetric(vertical: 5),
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('images/chat bg new.jpg'),
                 fit: BoxFit.cover)),
@@ -123,76 +125,92 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 8.0, top: 8.0, bottom: 8.0, right: 6.0),
-                  width: MediaQuery.of(context).size.width * 0.84,
-                  height: MediaQuery.of(context).size.width * 0.1,
-                  padding: EdgeInsets.only(right: 10, left: 5),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.emoji_emotions_outlined,
-                        color: Colors.grey.shade500,
-                        size: 30,
+                Expanded(
+                  child: Container(
+                    margin: const EdgeInsets.only(
+                        left: 8.0, top: 8.0, bottom: 8.0, right: 6.0),
+                    width: MediaQuery.of(context).size.width * 0.84,
+                    height: MediaQuery.of(context).size.width * 0.1,
+                    padding: const EdgeInsets.only(right: 10, left: 5),
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(top: 3.0),
-                        width: MediaQuery.of(context).size.width * 0.55,
-                        height: MediaQuery.of(context).size.width * 0.1,
-                        child: TextField(
-                          controller: textEditingController,
-                          cursorColor: Colors.teal,
-                          style: TextStyle(fontSize: 20),
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'Type a Message...',
-                            hintStyle: TextStyle(
-                              color: Colors.grey.shade400,
-                              fontSize: 19,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(
+                          Icons.emoji_emotions_outlined,
+                          color: Colors.grey.shade500,
+                          size: 30,
+                        ),
+                        const SizedBox(
+                          width: 6,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 3.0),
+                          width: MediaQuery.of(context).size.width * 0.55,
+                          height: MediaQuery.of(context).size.width * 0.1,
+                          child: TextField(
+                            controller: textEditingController,
+                            cursorColor: Colors.teal,
+                            style: const TextStyle(fontSize: 20),
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Type a Message...',
+                              hintStyle: TextStyle(
+                                color: Colors.grey.shade400,
+                                fontSize: 19,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Icon(
-                        CupertinoIcons.paperclip,
-                        color: Colors.grey.shade500,
-                        size: 27,
-                      ),
-                      SizedBox(width: 5,),
-                      textEditingController.text.trim()=="" || textEditingController.text==null? Icon(
-                        Icons.camera_alt_rounded,
-                        color: Colors.grey.shade500,
-                        size: 27,
-                      ) :
-                          Container(),
-
-                    ],
+                        Expanded(
+                          child: Icon(
+                            CupertinoIcons.paperclip,
+                            color: Colors.grey.shade500,
+                            size: 27,
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        textEditingController.text.trim() == ""
+                            ? Expanded(
+                                child: Icon(
+                                  Icons.camera_alt_rounded,
+                                  color: Colors.grey.shade500,
+                                  size: 27,
+                                ),
+                              )
+                            : Container(),
+                      ],
+                    ),
                   ),
                 ),
                 CircleAvatar(
-                  backgroundColor: Color(0xff00897b),
+                  backgroundColor: const Color(0xff00897b),
                   radius: 25,
-                  child: textEditingController.text.trim() == "" || textEditingController.text == null?
-                       Icon(Icons.mic, color: Colors.white,)
-                      : IconButton(onPressed: (){
-                          data.chatMessages[data.chatMessages.length] = [textEditingController.text, true];
-                          textEditingController.clear();
-                          setState(() {
-
-
-                          });
-                  }, icon: Icon(
-                    Icons.send_rounded, color:  Colors.white,
-                  ))
-                  ,
+                  child: textEditingController.text.trim() == ""
+                      ? const Icon(
+                          Icons.mic,
+                          color: Colors.white,
+                        )
+                      : IconButton(
+                          onPressed: () {
+                            data.chatMessages[data.chatMessages.length] = [
+                              textEditingController.text,
+                              true
+                            ];
+                            textEditingController.clear();
+                            setState(() {});
+                          },
+                          icon: const Icon(
+                            Icons.send_rounded,
+                            color: Colors.white,
+                          )),
                 )
               ],
             )

@@ -31,7 +31,7 @@ class CallTile extends StatelessWidget {
       title: Text(
         name,
         overflow: TextOverflow.ellipsis,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 19,
         ),
       ),
@@ -44,7 +44,7 @@ class CallTile extends StatelessWidget {
               inComing
                   ? CupertinoIcons.arrow_down_left
                   : CupertinoIcons.arrow_up_right,
-              color: isMissed ? Colors.red : Color(0xff25d366),
+              color: isMissed ? Colors.red : const Color(0xff25d366),
               size: 18,
             ),
           ),
@@ -62,7 +62,7 @@ class CallTile extends StatelessWidget {
         ],
       ),
       trailing: Icon(
-        videocall == 0 ? Icons.call: Icons.videocam_rounded,
+        videocall == 0 ? Icons.call : Icons.videocam_rounded,
         size: 23,
         color: Colors.teal,
       ),
